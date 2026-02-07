@@ -153,3 +153,30 @@ console.log(secondItem);
 // this will select the second element with the class of list-group-item
 secondItem.style.color = "green";
 // this will change the color of the second list item to coral
+
+e) QUERYSELECTORALL
+
+var titles = document.querySelectorAll(".title");
+console.log(titles);
+//this will return a node list of all the elements with the class "title" in the document.
+
+titles[0].textContent = "Hello World!";
+//this will change the text content of the first element in the node list to "Hello World!".
+
+var oddItems = document.querySelectorAll("li:nth-child(odd)");
+console.log(oddItems);
+//this will return a node list of all the odd list items in the document.
+
+for (var i = 0; i < oddItems.length; i++) {
+  oddItems[i].style.backgroundColor = "lightgray";
+}
+//this will change the background color of all the odd list items to light gray.
+
+var evenItems = document.querySelectorAll("li:nth-child(even)");
+console.log(evenItems);
+//this will return a node list of all the even list items in the document.
+
+for (var i = 0; i < evenItems.length; i++) {
+  evenItems[i].style.backgroundColor = "lightblue";
+}   
+//this will change the background color of all the even list items to light blue.
