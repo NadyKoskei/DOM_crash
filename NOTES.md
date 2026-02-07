@@ -89,3 +89,23 @@ items[2].textContent = "Hello you";
 for (var i = 0; i < items.length; i++) {
   items[i].style.fontStyle = "italic";
 }
+
+c) GETELELEMENTSBYTAGNAME
+
+var li = document.getElementsByTagName("li");
+console.log(li);
+//the above code will return an HTML collection of all the elements with the tag name "li". You can access individual elements in the collection using their index, for example:
+console.log(li[0]);
+
+//you can also modify the properties of the elements in the collection. For example, to change the font weight of the first li and the color of the second li, you can do:
+li[0].style.fontWeight = "bold";
+li[1].style.color = "red";
+li[3].style.backgroundColor = "yellow";
+
+//to change the text content of the third li, you can do:
+li[2].textContent = "Hello you";
+
+//to apply a style to all li in the collection, you can use a loop. For example, to set the font style of all li to italics, you can do:
+for (var i = 0; i < li.length; i++) {
+  li[i].style.fontStyle = "italic";
+}
