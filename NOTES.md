@@ -109,3 +109,47 @@ li[2].textContent = "Hello you";
 for (var i = 0; i < li.length; i++) {
   li[i].style.fontStyle = "italic";
 }
+
+d) QUERYSELECTORS 
+
+var header = document.querySelector("#main-header");
+console.log(header);
+// this will select the first element with the id of main-header
+
+header.style.borderBottom = "solid 3px #000";
+// this will add a solid border to the bottom of the header element
+
+var input = document.querySelector("input");
+console.log(input);
+// this will select the first input element in the document
+
+input.value = "Hello World";
+// this will set the value of the input element to "Hello World"
+
+var submit = document.querySelector('input[type="submit"]');
+console.log(submit);
+// this will select the first input element with the type of submit
+
+submit.value = "SEND";
+// this will change the value of the submit button to "SEND"    
+
+var item = document.querySelector(".list-group-item");
+console.log(item);
+// this will select the first element with the class of list-group-item
+item.style.color = "red";
+// this will change the color of the first list item to red
+
+//NB that it only selects the first element with the class of list-group-item.
+
+var lastItem = document.querySelector(".list-group-item:last-child");
+console.log(lastItem);
+// this will select the last element with the class of list-group-item
+lastItem.style.color = "blue";
+// this will change the color of the last list item to blue
+
+
+var secondItem = document.querySelector(".list-group-item:nth-child(2)");
+console.log(secondItem);
+// this will select the second element with the class of list-group-item
+secondItem.style.color = "green";
+// this will change the color of the second list item to coral
