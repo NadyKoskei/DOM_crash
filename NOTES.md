@@ -70,4 +70,22 @@ var header = document.getElementById("main-header");
 header.style.borderBottom = "solid 3px #000";
 //this will change the style of the element with the id of main-header to have a border bottom of solid 3px #000
 
-b) 
+b) GETELELEMENTSBYCLASSNAME
+
+var items = document.getElementsByClassName("list-group-item");
+console.log(items);
+//the above code will return an HTML collection of all the elements with the class name "list-group-item". You can access individual elements in the collection using their index, for example:
+console.log(items[0]);
+
+//you can also modify the properties of the elements in the collection. For example, to change the font weight of the first item and the color of the second item, you can do:
+items[0].style.fontWeight = "bold";
+items[1].style.color = "red";
+items[3].style.backgroundColor = "yellow";
+
+//to change the text content of the third item, you can do:
+items[2].textContent = "Hello you";
+
+//to apply a style to all items in the collection, you can use a loop. For example, to set the font style of all items to italics, you can do:
+for (var i = 0; i < items.length; i++) {
+  items[i].style.fontStyle = "italic";
+}
