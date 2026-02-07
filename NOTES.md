@@ -38,3 +38,36 @@ document.all[9].textContent = "Hello";
 
 console.log(document.forms);
 // The document.forms property returns a collection of all the <form> elements in the document. It allows us to access and manipulate forms in the DOM. We can use this property to retrieve information about the forms, such as their names, IDs, and input fields, and to perform actions like submitting or resetting forms programmatically.
+
+2. SELECTING METHODS
+
+a) GETELEMENTBYID
+
+console.log(document.getElementById("header-title"));
+//this will return the element with the id of header-title
+
+var headerTitle = document.getElementById("header-title");
+console.log(headerTitle);
+//this will return the element with the id of header-title and store it in a variable called headerTitle
+
+headerTitle.textContent = "Hello World";
+//this will change the text content of the element with the id of header-title to Hello World
+
+headerTitle.innerText = "Goodbye World";
+//this will change the inner text of the element with the id of header-title to Goodbye World
+
+console.log(headerTitle.textContent);
+//this will return the text content of the element with the id of header-title without any formatting, disregarding the styles applied to the element.
+
+console.log(headerTitle.innerText);
+//this will return the inner text of the element with the id of header-title with respect to the formatting of the element.. including styles applied to the element. for example if the element is hidden with display:none then it will not return the text content of the element but if the element is visible then it will return the text content of the element
+
+headerTitle.innerHTML = "<h3>Hello World</h3>";
+//this will change the inner HTML of the element with the id of header-title to <h3>Hello World</h3> which will render as Hello World in an h3 tag.
+//innerHTML allows you to insert HTML code into an element, while textContent and innerText only allow you to insert plain text.
+
+var header = document.getElementById("main-header");
+header.style.borderBottom = "solid 3px #000";
+//this will change the style of the element with the id of main-header to have a border bottom of solid 3px #000
+
+b) 
