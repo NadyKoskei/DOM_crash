@@ -13,6 +13,7 @@ console.log(itemList2.parentElement);
 //is used to get the parent element of the specified element. In this case, it will return the parent element of the element with the id "items2", which is the <div> element with id main2.
 
 itemList2.parentElement.style.fontStyle = 'italic';
-//this will
+//this will change the font style of all the text in the parent element of itemList2 from normal to italics. NB that it affects the content inside the element with id main2.
 
 //childNodes
+
