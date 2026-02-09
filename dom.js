@@ -41,6 +41,22 @@ console.log(itemList.lastChild);
 console.log(itemList.lastElementChild);
 //is used to get the last child element of the specified element, excluding text nodes and comment nodes. In this case, it will return the last child element of the element with the id "items", which is the last <li> element.
 itemList.lastElementChild.textContent = 'Hello 4';
-//this line of code changes the text content of the last child element of itemList to "Hello 4". This will affect the text displayed in the last <li> element within the element with id "items".
+//this changes the text content of the last child element of itemList to "Hello 4". This will affect the text displayed in the last <li> element within the element with id "items".
 
+//nextSibling
+console.log(itemList2.nextSibling);
+//this is used to get the next sibling node of the specified element (itemList2). It will return the next sibling node, which can be a text node, an element node, or a comment node. In this case, it will likely return a text node (like whitespace) if there is any whitespace after the element with id "items2".
 
+//nextElementSibling
+console.log(itemList2.nextElementSibling);
+//this is used to get the next sibling element of the specified element (itemList2), excluding text nodes and comment nodes. It will return the next sibling element, which is the next HTML element that follows itemList2 in the DOM. In this case, it will return the next sibling element after the element with id "items2", which could be another HTML element if it exists.
+
+//previousSibling
+console.log(itemList2.previousSibling);
+//this is used to get the previous sibling node of the specified element (itemList2). It will return the previous sibling node, which can be a text node, an element node, or a comment node. In this case, it will likely return a text node (like whitespace) if there is any whitespace before the element with id "items2".
+
+//previousElementSibling
+console.log(itemList2.previousElementSibling);
+//this is used to get the previous sibling element of the specified element (itemList2), excluding text nodes and comment nodes. It will return the previous sibling element, which is the previous HTML element that precedes itemList2 in the DOM. In this case, it will return the previous sibling element before the element with id "items2", which could be another HTML element if it exists.
+itemList2.previousElementSibling.style.color = 'red';
+//this line of code changes the text color of the previous sibling element of itemList2 to red. This will affect the appearance of the previous sibling element, which is the HTML element that precedes itemList2 in the DOM.
