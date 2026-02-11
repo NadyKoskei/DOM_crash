@@ -23,6 +23,9 @@ function buttonClick2() {
 
 // using the event object to get more information about the event
 
+var button = document.getElementById("button2").addEventListener('click', buttonClick3);
+
+
 function buttonClick3(e) {
   //console.log(e);
   console.log(e.target); // the element that triggered the event
@@ -42,5 +45,21 @@ function buttonClick3(e) {
   console.log(e.shiftKey); // true if the shift key was pressed when the event was triggered
 }
 
-var button = document.getElementById("button2").addEventListener('click', buttonClick3);
+
+//mouse events
+
+var button = document.getElementById("button4");
+
+button.addEventListener('click', runEvent); // this will run the runEvent function every time the button is clicked
+
+button.addEventListener('dblclick', runEvent); // this will run the runEvent function every time the button is double clicked
+
+button.addEventListener('mousedown', runEvent); // this will run the runEvent function every time the mouse button is pressed down on the button
+
+button.addEventListener('mouseup', runEvent); // this will run the runEvent function every time the mouse button is released on the button
+
+
+function runEvent(e) {
+  console.log('EVENT TYPE: ' + e.type);
+}
 
