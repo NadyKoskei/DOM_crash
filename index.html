@@ -60,6 +60,8 @@
       </div>
     </div>
 
+    <!--This is the second main section, to show that we can have multiple sections with the same structure and still target them separately with JavaScript -->
+
     <div class="container mt-4">
       <div id="main2" class="card card-body">
         <h2 class="title">Add Item</h2>
@@ -77,29 +79,29 @@
         </ul>
         <!-- <span></span>  to demo sibling -->
 
-        <button
-          onclick="""
-          id="button4"
-          class="btn btn-dark btn-block mb-3"
-        >
+        <button onclick="" id="button4" class="btn btn-dark btn-block mb-3">
           Click 4
         </button>
 
-        <button
-          onclick=""
-          id="button5"
-          class="btn btn-dark btn-block mb-3"
-        >
+        <button onclick="" id="button5" class="btn btn-dark btn-block mb-3">
           Click 5
         </button>
 
-        <button id="button6" class="btn btn-dark btn-block">
+        <button id="button6" class="btn btn-dark btn-block mb-3">
           Click 6
         </button>
+
+        <div id="output"></div>
+
+        <div
+          id="box"
+          style="width: 400px; height: 200px; background-color: aqua"
+        >
+          <h3>Hover over me</h3>
+        </div>
       </div>
     </div>
 
-    <script src="dom.js"></script>
     <script src="dom.js"></script>
   </body>
 </html>
