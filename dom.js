@@ -58,8 +58,29 @@ button.addEventListener('mousedown', runEvent); // this will run the runEvent fu
 
 button.addEventListener('mouseup', runEvent); // this will run the runEvent function every time the mouse button is released on the button
 
-
+//e.type will give us the type of event that was triggered, so we can use the same function for multiple events and still know which event was triggered
 function runEvent(e) {
   console.log('EVENT TYPE: ' + e.type);
 }
 
+var box = document.getElementById("box");
+
+box.addEventListener('mouseenter', runEvent); // this will run the runEvent function every time the mouse enters the box
+
+box.addEventListener('mouseleave', runEvent); // this will run the runEvent function every time the mouse leaves the box
+
+box.addEventListener('mouseover', runEvent); // this will run the runEvent function every time the mouse is over the box
+box.addEventListener('mouseout', runEvent); // this will run the runEvent function every time the mouse is out of the box
+
+//NB mouseentr and mouseover are similar but mouseover will also trigger when the mouse enters a child element of the box, while mouseenter will only trigger when the mouse enters the box (element) itself. The same applies to mouseout and mouseleave.
+
+box.addEventListener('mousemove', runEvent); // this will run the runEvent function every time the mouse is moved within the box
+
+function runEvent(e) {
+  console.log('EVENT TYPE: ' + e.type); 
+
+// output.innerHTML = '<h3>MouseX: ' + e.offsetX + '</h3><h3>MouseY: ' + e.offsetY + '</h3>';
+
+box.style.backgroundColor = "rgb(" + e.offsetX + "," + e.offsetY + ", 40)"; 
+// this will change the background color of the box based on the mouse position within the box
+}
