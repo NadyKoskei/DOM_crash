@@ -1,19 +1,10 @@
 
-var select = document.querySelector("select");
+var form = document.querySelector("form");
 
-select.addEventListener("change", runEvent);
-//this will run the function every time the value of the select changes
+ form.addEventListener("submit", runEvent);
 
-select.addEventListener("input", runEvent);
-//this will run the function every time the value of the select changes, but it will also run when the user types in the select
+ function runEvent(e) {
+    e.preventDefault(); //this prevents the default behavior of the form submission, which is to reload the page. By calling e.preventDefault(), we can handle the form submission with our own JavaScript code without causing a page refresh.
+  console.log("Event Type: " + e.type);
 
-
-function runEvent(e) {
-  console.log(`Event Type: ${e.type}`);
-  console.log(`Value: ${e.target.value}`);
-}
-
-
-
-
- 
+ }
